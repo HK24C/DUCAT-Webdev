@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+    background-image: url('image/_c8142f62-888e-4783-9a00-a106a3d2a1bc.jpg');
+    background-repeat: no-repeat;
+    background-size: auto; /* Ensure the image is displayed at its original size */
+    background-position: center; 
+}
+.light {
+            width: 100px;
+            height: 200px;
+            background-color: black;
+            border: 2px solid yellow;
+            border-radius: 30px;
+            position: relative;
+            top: 50px;
+            left: 60%;
+            transform: translateX(-50%);
+        }
+        .subcircle {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            border: solid 7px transparent;
+        }
+        .red {
+            top: 30px;
+            border-color: black;
+            animation: red 5s infinite;
+        }
+        .yellow {
+            top: 80px;
+            border-color: black;
+            animation: yellow 5s infinite;
+        }
+        .green {
+            top: 130px;
+            border-color: black;
+            animation: green 5s infinite;
+        }
+        @keyframes red {
+            0%, 33.33% { background-color: red; }
+            /* 33.33%, 100% { background-color: white; } */
+        }
+        @keyframes yellow {
+            /* 33.33%, 66.66% { background-color: white; } */
+            33.33%, 77.77% { background-color: yellow; }
+            /* 77.77%, 100% { background-color: white; } */
+        }
+        @keyframes green {
+            /* 0%, 66.66% { background-color: white; } */
+    77.77%, 100% { background-color: rgb(6, 206, 6); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="light">
+        <div class="subcircle red"></div>
+        <div class="subcircle yellow"></div>
+        <div class="subcircle green"></div>
+    </div>
+</body>
+</html>
